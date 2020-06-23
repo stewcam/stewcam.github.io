@@ -1,3 +1,0 @@
-# Markdown test
-
-This is a file that I am going to push to GitHub.

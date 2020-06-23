@@ -3,7 +3,9 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Overview - mdBook guide for Windows</title>
+        <title>mdBook guide for Windows</title>
+        
+        <meta name="robots" content="noindex" />
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -154,6 +156,77 @@
 <p>In keeping with the lightweight nature of Markdown, websites produced with mdBook are simple and uncluttered. There is a range of standard themes, each of which can be fully customised. A search box is included, with highlighting of search results.</p>
 <p>mdBook is written in Rust. Most of the available online resources are aimed at users running Node.js and npm. However, mdBook is also available as a single compiled file, and is ideal for Windows users who are seeking to generate a static website.</p>
 <p>mdBook is free and open source, with source code on <a href="https://github.com/rust-lang/mdBook" title="mdBook on GitHub" target="_blank">GitHub</a>. Issues and feature requests can be posted on the <a href="https://github.com/rust-lang/mdBook" title="mdBook issue tracker" target="_blank">issue tracker</a>.</p>
+<h1><a class="header" href="#requirements" id="requirements">Requirements</a></h1>
+<p>mdBook is a command line tool, so the user requires a basic understanding of running commands from the Windows command prompt. It can also be used through PowerShell.</p>
+<p>mdBook makes use of source files written in Markdown, so the user needs to learn some simple syntax. As Markdown is a text format, it can be edited in any text editor. However, use of a dedicated Markdown editor simplifies the task. A recommended choice is the open source editor <a href="https://www.zettlr.com" title="Zettlr Markdown editor" target="_blank">Zettlr</a>.</p>
+<p>Books can be viewed offline in a modern browser such as Google Chrome or Microsoft Edge. In order to view books online, the user needs to be able to upload files to some webspace. This is commonly done with a FTP client such as <a href="https://filezilla-project.org" title="FileZilla FTP client" target="_blank">Filezilla</a>.</p>
+<h1><a class="header" href="#setup" id="setup">Setup</a></h1>
+<p>Setup of mdBook in Windows starts with download of the latest Windows release from the page at:</p>
+<p><a href="https://github.com/rust-lang/mdBook/releases" title="mdBook releases" target="_blank">https://github.com/rust-lang/mdBook/releases</a></p>
+<p>At the time of writing the current release is v0.3.7, which is contained in the ZIP file:</p>
+<blockquote>
+<p>mdbook-v0.3.7-x86_64-pc-windows-msvc.zip</p>
+</blockquote>
+<p>This archive contains just one file - the compiled version of mdBook:</p>
+<blockquote>
+<p>mdbook.exe</p>
+</blockquote>
+<p>Extract the file to a folder to hold the books that you will create with mdBook. Let us call the folder mdBooks. Now open a command prompt window and navigate to the new folder. To initialise a new book called Book1, create a sub-folder called Book1 and run the command:</p>
+<blockquote>
+<p>mdbook init Book1 --theme</p>
+</blockquote>
+<p>This will create the following structure in folder Book1:</p>
+<pre><code>├───book
+│   ├───css
+│   └───FontAwesome
+│       ├───css
+│       └───fonts
+└───src
+    └───theme
+        └───css
+</code></pre>
+<p>With the current release, it is necessary to manually move the theme folder up a level prior to building the book. After the move the structure in folder Book1 becomes:</p>
+<pre><code>├───book
+│   ├───css
+│   └───FontAwesome
+│       ├───css
+│       └───fonts
+├───src
+└───theme
+    └───css
+</code></pre>
+<p>We are now ready to format the book.</p>
+<h1><a class="header" href="#format" id="format">Format</a></h1>
+<p>The main steps to format a book are:</p>
+<ol>
+<li>Prepare the summary file SUMMARY.md</li>
+<li>Set the parameters of the book using the configuration file book.toml</li>
+</ol>
+<h1><a class="header" href="#build" id="build">Build</a></h1>
+<p>To build a book:..</p>
+<h1><a class="header" href="#customise" id="customise">Customise</a></h1>
+<p>To customise a book...</p>
+<h1><a class="header" href="#blog" id="blog">Blog</a></h1>
+<p>mdBook can be used to create a simple diary blog. The following example SUMMARY.md is adapted from the <a href="https://blog.zzhou612.com/2019/10/20/using-mdbook-to-keep-a-personal-diary" title="Blog of Nathan Zhou" target="_blank">blog of Nathan Zhou</a>:</p>
+<pre><code># Summary
+
+[Preamble](preamble.md)
+
+- [August](Aug/08_aug.md)
+    * [Thu 29 Aug](Aug/0829.md)
+    * [Fri 30 Aug](Aug/0830.md)
+    * [Sat 31 Aug](Aug/0831.md)
+
+- [September](Sep/09_sep.md)
+    * [Sun 1 Sep](Sep/0901.md)
+    * [Mon 2 Sep](Sep/0902.md)
+    * [Tue 3 Sep](Sep/0903.md)
+    * [Wed 4 Sep](Sep/0904.md)
+    * [Thu 5 Sep](Sep/0905.md)
+    * [Fri 6 Sep](Sep/0906.md)
+    * [Sat 7 Sep](Sep/0907.md)
+    * [Sun 8 Sep](Sep/0908.md)
+</code></pre>
 <hr><p align=center><a href="https://github.com/rust-lang/mdBook" target="_blank">mdBook</a> &lt;/&gt; 2017-2020</p>
                     </main>
 
@@ -161,10 +234,6 @@
                         <!-- Mobile navigation buttons -->
                         
 
-                        
-                            <a rel="next" href="reqs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -175,10 +244,6 @@
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
 
-                
-                    <a rel="next" href="reqs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
                 
             </nav>
 
@@ -211,6 +276,14 @@
         <!-- Custom JS scripts -->
         
 
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
         
 
     </body>

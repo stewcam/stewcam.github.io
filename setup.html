@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Overview - mdBook guide for Windows</title>
+        <title>Setup - mdBook guide for Windows</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="overview.html">Overview</a></li><li class="chapter-item expanded affix "><a href="reqs.html">Requirements</a></li><li class="chapter-item expanded affix "><a href="setup.html">Setup</a></li><li class="chapter-item expanded affix "><a href="format.html">Format</a></li><li class="chapter-item expanded affix "><a href="build.html">Build</a></li><li class="chapter-item expanded affix "><a href="custom.html">Customise</a></li><li class="chapter-item expanded affix "><a href="blog.html">Blog</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="overview.html">Overview</a></li><li class="chapter-item expanded affix "><a href="reqs.html">Requirements</a></li><li class="chapter-item expanded affix "><a href="setup.html" class="active">Setup</a></li><li class="chapter-item expanded affix "><a href="format.html">Format</a></li><li class="chapter-item expanded affix "><a href="build.html">Build</a></li><li class="chapter-item expanded affix "><a href="custom.html">Customise</a></li><li class="chapter-item expanded affix "><a href="blog.html">Blog</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -149,20 +149,55 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#overview" id="overview">Overview</a></h1>
-<p>This is a guide to mdBook for users of Windows 10. mdBook is a command line tool to create books. Books are created from source files that are written in Markdown. Each book is a set of HTML pages that can be uploaded as a static website. The contents of the book are displayed as a sidebar menu.</p>
-<p>In keeping with the lightweight nature of Markdown, websites produced with mdBook are simple and uncluttered. There is a range of standard themes, each of which can be fully customised. A search box is included, with highlighting of search results.</p>
-<p>mdBook is written in Rust. Most of the available online resources are aimed at users running Node.js and npm. However, mdBook is also available as a single compiled file, and is ideal for Windows users who are seeking to generate a static website.</p>
-<p>mdBook is free and open source, with source code on <a href="https://github.com/rust-lang/mdBook" title="mdBook on GitHub" target="_blank">GitHub</a>. Issues and feature requests can be posted on the <a href="https://github.com/rust-lang/mdBook" title="mdBook issue tracker" target="_blank">issue tracker</a>.</p>
+                        <h1><a class="header" href="#setup" id="setup">Setup</a></h1>
+<p>Setup of mdBook in Windows starts with download of the latest Windows release from the page at:</p>
+<p><a href="https://github.com/rust-lang/mdBook/releases" title="mdBook releases" target="_blank">https://github.com/rust-lang/mdBook/releases</a></p>
+<p>At the time of writing the current release is v0.3.7, which is contained in the ZIP file:</p>
+<blockquote>
+<p>mdbook-v0.3.7-x86_64-pc-windows-msvc.zip</p>
+</blockquote>
+<p>This archive contains just one file - the compiled version of mdBook:</p>
+<blockquote>
+<p>mdbook.exe</p>
+</blockquote>
+<p>Extract the file to a folder to hold the books that you will create with mdBook. Let us call the folder mdBooks. Now open a command prompt window and navigate to the new folder. To initialise a new book called Book1, create a sub-folder called Book1 and run the command:</p>
+<blockquote>
+<p>mdbook init Book1 --theme</p>
+</blockquote>
+<p>This will create the following structure in folder Book1:</p>
+<pre><code>├───book
+│   ├───css
+│   └───FontAwesome
+│       ├───css
+│       └───fonts
+└───src
+    └───theme
+        └───css
+</code></pre>
+<p>With the current release, it is necessary to manually move the theme folder up a level prior to building the book. After the move the structure in folder Book1 becomes:</p>
+<pre><code>├───book
+│   ├───css
+│   └───FontAwesome
+│       ├───css
+│       └───fonts
+├───src
+└───theme
+    └───css
+</code></pre>
+<p>We are now ready to format the book.</p>
 <hr><p align=center><a href="https://github.com/rust-lang/mdBook" target="_blank">mdBook</a> &lt;/&gt; 2017-2020</p>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="reqs.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
                         
-                            <a rel="next" href="reqs.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="format.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -174,9 +209,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="reqs.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
                 
-                    <a rel="next" href="reqs.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="format.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
