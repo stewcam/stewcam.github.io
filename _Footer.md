@@ -1,1 +1,1 @@
-Copyright © <Dates> by <Authors>. All Rights Reserved.
+Copyright © 2024 by StewCam

@@ -1,4 +1,4 @@
-# Test Markdown for GitHub wiki
+# GitHubWikiTest
 
 ## Table of contents
 
